@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="critterpedia.js"></script>
+        <title>Critterpedia NOW</title>
+    </head>
+    <body>
+        <div class="ClockHemi">
+            <div class="HemiButton">  
+                <input type="image" src="img/NorthernHemisphere.png" id="hemi" onclick="SwapHemi()"></button>
+            </div>
+            <div class="Time">
+                <h1 id="clock">TIME</h1>
+                <script type="text/javascript">
+                    function showTime()
+                    {
+                        var date = new Date();
+                        var h = date.getHours();
+                        var m = date.getMinutes();
+                        var ses = " AM";
+                        if(h>12)
+                        {
+                            h-=12;
+                            ses = " PM";
+                        }
+                        h = (h < 10) ? "0" + h : h;
+                        m = (m < 10) ? "0" + m : m;
+                        var time = h + ":" + m + ses;
+
+                        document.getElementById("clock").innerText = time;
+                        document.getElementById("clock").textContent = time;
+                    }
+                    showTime();
+                    setInterval(showTime, 1000);    
+                </script>
+            </div>
+            <div class="Date">
+                <h2 id="cal">DATE</h2>
+                <script type="text/javascript">
+                    function showDay()
+                    {
+                        var date = new Date();
+                        var month = date.getMonth();
+                        var day = date.getDate();
+                        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                        var calendar = months[month] + " " + day;
+                        document.getElementById("cal").innerText = calendar;
+                        document.getElementById("cal").textContent = calendar;
+                    }
+                    showDay();
+                    setInterval(showDay, 1000);    
+                </script>
+            </div>
+            <div class="Day">
+                <p id="day">DAY</p>
+                <script type="text/javascript">
+                    function showWeek()
+                    {
+                        var date = new Date();
+                        var weekday = date.getDay();
+                        var weekdays = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."]
+                        var calendar = weekdays[weekday];
+                        document.getElementById("day").innerText = calendar;
+                        document.getElementById("day").textContent = calendar;
+                    }
+                    showWeek();
+                    setInterval(showWeek, 1000);    
+                </script>
+            </div>
+        </div>
+        <div class="grid">
+            <div id="Bitterling"><image id="Bitterling image"></image></div>
+            <div id="Pale Chub"><image id="Pale Chub image"></image></div>
+            <div id="Crucian Carp"><image id="Crucian Carp image"></image></div>
+            <div id="Dace"><image id="Dace image"></image></div>
+            <div id="Carp"><image id="Carp image"></image></div>
+            <div id="Koi"><image id="Koi image"></image></div>
+            <div id="Goldfish"><image id="Goldfish image"></image></div>
+            <div id="Pop-Eyed Goldfish"><image id="Pop-Eyed Goldfish image"></image></div>
+            <div id="Ranchu Goldfish"><image id="Ranchu Goldfish image"></image></div>
+            <div id="Killifish"><image id="Killifish image"></image></div>
+            <div id="Crawfish"><image id="Crawfish image"></image></div>
+            <div id="Soft-Shelled Turtle"><image id="Soft-Shelled Turtle image"></image></div>
+            <div id="Snapping Turtle"><image id="Snapping Turtle image"></image></div>
+            <div id="Tadpole"><image id="Tadpole image"></image></div>
+            <div id="Frog"><image id="Frog image"></image></div>
+            <div id="Freshwater Goby"><image id="Freshwater Goby image"></image></div>
+            <div id="Loach"><image id="Loach image"></image></div>
+            <div id="Catfish"><image id="Catfish image"></image></div>
+            <div id="Giant Snakehead"><image id="Giant Snakehead image"></image></div>
+            <div id="Bluegill"><image id="Bluegill image"></image></div>
+            <div id="Yellow Perch"><image id="Yellow Perch image"></image></div>
+            <div id="Black Bass"><image id="Black Bass image"></image></div>
+            <div id="Tilapia"><image id="Tilapia image"></image></div>
+            <div id="Pike"><image id="Pike image"></image></div>
+            <div id="Pond Smelt"><image id="Pond Smelt image"></image></div>
+            <div id="Sweetfish"><image id="Sweetfish image"></image></div>
+            <div id="Cherry Salmon"><image id="Cherry Salmon image"></image></div>
+            <div id="Char"><image id="Char image"></image></div>
+            <div id="Golden Trout"><image id="Golden Trout image"></image></div>
+            <div id="Stringfish"><image id="Stringfish image"></image></div>
+            <div id="Salmon"><image id="Salmon image"></image></div>
+            <div id="King Salmon"><image id="King Salmon image"></image></div>
+            <div id="Mitten Crab"><image id="Mitten Crab image"></image></div>
+            <div id="Guppy"><image id="Guppy image"></image></div>
+            <div id="Nibble Fish"><image id="Nibble Fish image"></image></div>
+            <div id="Angelfish"><image id="Angelfish image"></image></div>
+            <div id="Betta"><image id="Betta image"></image></div>
+            <div id="Neon Tetra"><image id="Neon Tetra image"></image></div>
+            <div id="Rainbowfish"><image id="Rainbowfish image"></image></div>
+            <div id="Piranha"><image id="Piranha image"></image></div>
+            <div id="Arowana"><image id="Arowana image"></image></div>
+            <div id="Dorado"><image id="Dorado image"></image></div>
+            <div id="Gar"><image id="Gar image"></image></div>
+            <div id="Arapaima"><image id="Arapaima image"></image></div>
+            <div id="Saddled Bichir"><image id="Saddled Bichir image"></image></div>
+            <div id="Sturgeon"><image id="Sturgeon image"></image></div>
+            <div id="Sea Butterfly"><image id="Sea Butterfly image"></image></div>
+            <div id="Sea Horse"><image id="Sea Horse image"></image></div>
+            <div id="Clown Fish"><image id="Clown Fish image"></image></div>
+            <div id="Surgeonfish"><image id="Surgeonfish image"></image></div>
+            <div id="Butterfly Fish"><image id="Butterfly Fish image"></image></div>
+            <div id="Napoleonfish"><image id="Napoleonfish image"></image></div>
+            <div id="Zebra Turkeyfish"><image id="Zebra Turkeyfish image"></image></div>
+            <div id="Blowfish"><image id="Blowfish image"></image></div>
+            <div id="Puffer Fish"><image id="Puffer Fish image"></image></div>
+            <div id="Anchovy"><image id="Anchovy image"></image></div>
+            <div id="Horse Mackerel"><image id="Horse Mackerel image"></image></div>
+            <div id="Barred Knifejaw"><image id="Barred Knifejaw image"></image></div>
+            <div id="Sea Bass"><image id="Sea Bass image"></image></div>
+            <div id="Red Snapper"><image id="Red Snapper image"></image></div>
+            <div id="Dab"><image id="Dab image"></image></div>
+            <div id="Olive Flounder"><image id="Olive Flounder image"></image></div>
+            <div id="Squid"><image id="Squid image"></image></div>
+            <div id="Moray Eel"><image id="Moray Eel image"></image></div>
+            <div id="Ribbon Eel"><image id="Ribbon Eel image"></image></div>
+            <div id="Tuna"><image id="Tuna image"></image></div>
+            <div id="Blue Marlin"><image id="Blue Marlin image"></image></div>
+            <div id="Giant Trevally"><image id="Giant Trevally image"></image></div>
+            <div id="Mahi-Mahi"><image id="Mahi-Mahi image"></image></div>
+            <div id="Ocean Sunfish"><image id="Ocean Sunfish image"></image></div>
+            <div id="Ray"><image id="Ray image"></image></div>
+            <div id="Saw Shark"><image id="Saw Shark image"></image></div>
+            <div id="Hammerhead Shark"><image id="Hammerhead Shark image"></image></div>
+            <div id="Great White Shark"><image id="Great White Shark image"></image></div>
+            <div id="Whale Shark"><image id="Whale Shark image"></image></div>
+            <div id="Suckerfish"><image id="Suckerfish image"></image></div>
+            <div id="Football Fish"><image id="Football Fish image"></image></div>
+            <div id="Oarfish"><image id="Oarfish image"></image></div>
+            <div id="Barreleye"><image id="Barreleye image"></image></div>
+            <div id="Coelacanth"><image id="Coelacanth image"></image></div>
+        </div>
+
+        <script type="text/javascript">
+            ShowAvail();
+        </script>
+
+    </body>
+</HTML>
