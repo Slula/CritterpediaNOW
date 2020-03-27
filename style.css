@@ -23,6 +23,10 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.container2{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 .ClockHemi {
     grid-column-start:2;
     display:grid;
