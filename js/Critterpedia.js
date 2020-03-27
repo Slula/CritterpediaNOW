@@ -112,6 +112,7 @@ function CheckAvail(item)
     {
         if((month <= item.emonth || month >= item.smonth)||(month <= item.emonth2 || month >= item.smonth2))
         {
+            document.getElementById(item.name).style.backgroundColor = "yellow";
             if(item.stime > item.etime)
             {
                 if((time <= item.etime || time >= item.stime)||(time <= item.etime2 || time >= item.stime2))
@@ -132,6 +133,7 @@ function CheckAvail(item)
     {
         if((month <= item.emonth && month >= item.smonth)||(month <= item.emonth2 && month >= item.smonth2))
         {
+            document.getElementById(item.name).style.backgroundColor = "yellow";
             if(item.stime > item.etime)
             {
                 if((time <= item.etime || time >= item.stime)||(time <= item.etime2 || time >= item.stime2))
