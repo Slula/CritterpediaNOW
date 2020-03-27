@@ -13,6 +13,11 @@
     background-color: white;
 }
 
+.grid div {
+    height: 98px;
+    width: 98px;
+}
+
 .ClockHemi {
     display:grid;
     grid-template-columns: 130px 200px 75px 1fr;
