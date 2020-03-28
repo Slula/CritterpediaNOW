@@ -94,6 +94,22 @@
     grid-column:2/5;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.Info-shadow{
+    grid-row:2;
+    grid-column:3/5;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.shad{
+    margin-top:-1px;
+    grid-column:1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.shadimg{
+    margin-top:-23px;
+    grid-column:2/3;
+}
+
 .Description{
     grid-row:3;
     grid-column:2/5;
