@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="js/critterpedia.js"></script>
+        <title>Critterpedia NOW</title>
+    </head>
+    <body>
+        <div class="ClockHemi">
+            <div class="HemiButton">  
+                <input type="image" src="img/NorthernHemisphere.png" id="hemi" onclick="SwapHemi()">
+            </div>
+            <div class="Time">
+                <h1 id="clock">TIME</h1>
+                <script type="text/javascript">
+                    function showTime()
+                    {
+                        var date = new Date();
+                        var h = date.getHours();
+                        var m = date.getMinutes();
+                        var ses = " AM";
+                        if(h>12)
+                        {
+                            h-=12;
+                            ses = " PM";
+                        }
+                        if(h == 0)
+                        {
+                            h = 12
+                        }
+                        h = (h < 10) ? "0" + h : h;
+                        m = (m < 10) ? "0" + m : m;
+                        var time = h + ":" + m + ses;
+
+                        document.getElementById("clock").innerText = time;
+                        document.getElementById("clock").textContent = time;
+                    }
+                    showTime();
+                    setInterval(showTime, 1000);    
+                </script>
+            </div>
+            <div class="Date">
+                <h2 id="cal">DATE</h2>
+                <script type="text/javascript">
+                    function showDay()
+                    {
+                        var date = new Date();
+                        var month = date.getMonth();
+                        var day = date.getDate();
+                        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                        var calendar = months[month] + " " + day;
+                        document.getElementById("cal").innerText = calendar;
+                        document.getElementById("cal").textContent = calendar;
+                    }
+                    showDay();
+                    setInterval(showDay, 1000);    
+                </script>
+            </div>
+            <div class="Day">
+                <p id="day">DAY</p>
+                <script type="text/javascript">
+                    function showWeek()
+                    {
+                        var date = new Date();
+                        var weekday = date.getDay();
+                        var weekdays = ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."]
+                        var calendar = weekdays[weekday];
+                        document.getElementById("day").innerText = calendar;
+                        document.getElementById("day").textContent = calendar;
+                    }
+                    showWeek();
+                    setInterval(showWeek, 1000);    
+                </script>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="key">
+                <div class="g">Available NOW!</div>
+                <div class="y">Available this month, not at this time</div>
+                <div class="r">Not available this month</div>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="container">
+            <div class="grid">
+            <div class="fishicon" id="Bitterling"><input type="image" id="Bitterling image" onclick="ShowFish(Bitterling)"><input type="image" id="chkBitterling" src="img/uncheck.png" onclick="check(Bitterling)"></div>
+            <div class="fishicon" id="Pale Chub"><input type="image" id="Pale Chub image" onclick="ShowFish(PaleChub)"><input type="image" id="chkPale Chub" src="img/uncheck.png" onclick="check(PaleChub)"></div>
+            <div class="fishicon" id="Crucian Carp"><input type="image" id="Crucian Carp image" onclick="ShowFish(CrucianCarp)"><input type="image" id="chkCrucian Carp" src="img/uncheck.png" onclick="check(CrucianCarp)"></div>
+            <div class="fishicon" id="Dace"><input type="image" id="Dace image" onclick="ShowFish(Dace)"><input type="image" id="chkDace" src="img/uncheck.png" onclick="check(Dace)"></div>
+            <div class="fishicon" id="Carp"><input type="image" id="Carp image" onclick="ShowFish(Carp)"><input type="image" id="chkCarp" src="img/uncheck.png" onclick="check(Carp)"></div>
+            <div class="fishicon" id="Koi"><input type="image" id="Koi image" onclick="ShowFish(Koi)"><input type="image" id="chkKoi" src="img/uncheck.png" onclick="check(Koi)"></div>
+            <div class="fishicon" id="Goldfish"><input type="image" id="Goldfish image" onclick="ShowFish(Goldfish)"><input type="image" id="chkGoldfish" src="img/uncheck.png" onclick="check(Goldfish)"></div>
+            <div class="fishicon" id="Pop-Eyed Goldfish"><input type="image" id="Pop-Eyed Goldfish image" onclick="ShowFish(PopEyedGoldfish)"><input type="image" id="chkPop-Eyed Goldfish" src="img/uncheck.png" onclick="check(PopEyedGoldfish)"></div>
+            <div class="fishicon" id="Ranchu Goldfish"><input type="image" id="Ranchu Goldfish image" onclick="ShowFish(RanchuGoldfish)"><input type="image" id="chkRanchu Goldfish" src="img/uncheck.png" onclick="check(RanchuGoldfish)"></div>
+            <div class="fishicon" id="Killifish"><input type="image" id="Killifish image" onclick="ShowFish(Killifish)"><input type="image" id="chkKillifish" src="img/uncheck.png" onclick="check(Killifish)"></div>
+            <div class="fishicon" id="Crawfish"><input type="image" id="Crawfish image" onclick="ShowFish(Crawfish)"><input type="image" id="chkCrawfish" src="img/uncheck.png" onclick="check(Crawfish)"></div>
+            <div class="fishicon" id="Soft-Shelled Turtle"><input type="image" id="Soft-Shelled Turtle image" onclick="ShowFish(SoftTurt)"><input type="image" id="chkSoft-Shelled Turtle" src="img/uncheck.png" onclick="check(SoftTurt)"></div>
+            <div class="fishicon" id="Snapping Turtle"><input type="image" id="Snapping Turtle image" onclick="ShowFish(SnapTurt)"><input type="image" id="chkSnapping Turtle" src="img/uncheck.png" onclick="check(SnapTurt)"></div>
+            <div class="fishicon" id="Tadpole"><input type="image" id="Tadpole image" onclick="ShowFish(Tadpole)"><input type="image" id="chkTadpole" src="img/uncheck.png" onclick="check(Tadpole)"></div>
+            <div class="fishicon" id="Frog"><input type="image" id="Frog image" onclick="ShowFish(Frog)"><input type="image" id="chkFrog" src="img/uncheck.png" onclick="check(Frog)"></div>
+            <div class="fishicon" id="Freshwater Goby"><input type="image" id="Freshwater Goby image" onclick="ShowFish(FreshGoby)"><input type="image" id="chkFreshwater Goby" src="img/uncheck.png" onclick="check(FreshGoby)"></div>
+            <div class="fishicon" id="Loach"><input type="image" id="Loach image" onclick="ShowFish(Loach)"><input type="image" id="chkLoach" src="img/uncheck.png" onclick="check(Loach)"></div>
+            <div class="fishicon" id="Catfish"><input type="image" id="Catfish image" onclick="ShowFish(Catfish)"><input type="image" id="chkCatfish" src="img/uncheck.png" onclick="check(Catfish)"></div>
+            <div class="fishicon" id="Giant Snakehead"><input type="image" id="Giant Snakehead image" onclick="ShowFish(GiantSnake)"><input type="image" id="chkGiant Snakehead" src="img/uncheck.png" onclick="check(GiantSnake)"></div>
+            <div class="fishicon" id="Bluegill"><input type="image" id="Bluegill image" onclick="ShowFish(Bluegill)"><input type="image" id="chkBluegill" src="img/uncheck.png" onclick="check(Bluegill)"></div>
+            <div class="fishicon" id="Yellow Perch"><input type="image" id="Yellow Perch image" onclick="ShowFish(YellowPerch)"><input type="image" id="chkYellow Perch" src="img/uncheck.png" onclick="check(YellowPerch)"></div>
+            <div class="fishicon" id="Black Bass"><input type="image" id="Black Bass image" onclick="ShowFish(BlackBass)"><input type="image" id="chkBlack Bass" src="img/uncheck.png" onclick="check(BlackBass)"></div>
+            <div class="fishicon" id="Tilapia"><input type="image" id="Tilapia image" onclick="ShowFish(Tilapia)"><input type="image" id="chkTilapia" src="img/uncheck.png" onclick="check(Tilapia)"></div>
+            <div class="fishicon" id="Pike"><input type="image" id="Pike image" onclick="ShowFish(Pike)"><input type="image" id="chkPike" src="img/uncheck.png" onclick="check(Pike)"></div>
+            <div class="fishicon" id="Pond Smelt"><input type="image" id="Pond Smelt image" onclick="ShowFish(PondSmelt)"><input type="image" id="chkPond Smelt" src="img/uncheck.png" onclick="check(PondSmelt)"></div>
+            <div class="fishicon" id="Sweetfish"><input type="image" id="Sweetfish image" onclick="ShowFish(Sweetfish)"><input type="image" id="chkSweetfish" src="img/uncheck.png" onclick="check(Sweetfish)"></div>
+            <div class="fishicon" id="Cherry Salmon"><input type="image" id="Cherry Salmon image" onclick="ShowFish(CherrySalmon)"><input type="image" id="chkCherry Salmon" src="img/uncheck.png" onclick="check(CherrySalmon)"></div>
+            <div class="fishicon" id="Char"><input type="image" id="Char image" onclick="ShowFish(Char)"><input type="image" id="chkChar" src="img/uncheck.png" onclick="check(Char)"></div>
+            <div class="fishicon" id="Golden Trout"><input type="image" id="Golden Trout image" onclick="ShowFish(GoldenTrout)"><input type="image" id="chkGolden Trout" src="img/uncheck.png" onclick="check(GoldenTrout)"></div>
+            <div class="fishicon" id="Stringfish"><input type="image" id="Stringfish image" onclick="ShowFish(Stringfish)"><input type="image" id="chkStringfish" src="img/uncheck.png" onclick="check(Stringfish)"></div>
+            <div class="fishicon" id="Salmon"><input type="image" id="Salmon image" onclick="ShowFish(Salmon)"><input type="image" id="chkSalmon" src="img/uncheck.png" onclick="check(Salmon)"></div>
+            <div class="fishicon" id="King Salmon"><input type="image" id="King Salmon image" onclick="ShowFish(KingSalmon)"><input type="image" id="chkKing Salmon" src="img/uncheck.png" onclick="check(KingSalmon)"></div>
+            <div class="fishicon" id="Mitten Crab"><input type="image" id="Mitten Crab image" onclick="ShowFish(MittenCrab)"><input type="image" id="chkMitten Crab" src="img/uncheck.png" onclick="check(MittenCrab)"></div>
+            <div class="fishicon" id="Guppy"><input type="image" id="Guppy image" onclick="ShowFish(Guppy)"><input type="image" id="chkGuppy" src="img/uncheck.png" onclick="check(Guppy)"></div>
+            <div class="fishicon" id="Nibble Fish"><input type="image" id="Nibble Fish image" onclick="ShowFish(NibbleFish)"><input type="image" id="chkNibble Fish" src="img/uncheck.png" onclick="check(NibbleFish)"></div>
+            <div class="fishicon" id="Angelfish"><input type="image" id="Angelfish image" onclick="ShowFish(Angelfish)"><input type="image" id="chkAngelfish" src="img/uncheck.png" onclick="check(Angelfish)"></div>
+            <div class="fishicon" id="Betta"><input type="image" id="Betta image" onclick="ShowFish(Betta)"><input type="image" id="chkBetta" src="img/uncheck.png" onclick="check(Betta)"></div>
+            <div class="fishicon" id="Neon Tetra"><input type="image" id="Neon Tetra image" onclick="ShowFish(NeonTetra)"><input type="image" id="chkNeon Tetra" src="img/uncheck.png" onclick="check(NeonTetra)"></div>
+            <div class="fishicon" id="Rainbowfish"><input type="image" id="Rainbowfish image" onclick="ShowFish(Rainbowfish)"><input type="image" id="chkRainbowfish" src="img/uncheck.png" onclick="check(Rainbowfish)"></div>
+            <div class="fishicon" id="Piranha"><input type="image" id="Piranha image" onclick="ShowFish(Piranha)"><input type="image" id="chkPiranha" src="img/uncheck.png" onclick="check(Piranha)"></div>
+            <div class="fishicon" id="Arowana"><input type="image" id="Arowana image" onclick="ShowFish(Arowana)"><input type="image" id="chkArowana" src="img/uncheck.png" onclick="check(Arowana)"></div>
+            <div class="fishicon" id="Dorado"><input type="image" id="Dorado image" onclick="ShowFish(Dorado)"><input type="image" id="chkDorado" src="img/uncheck.png" onclick="check(Dorado)"></div>
+            <div class="fishicon" id="Gar"><input type="image" id="Gar image" onclick="ShowFish(Gar)"><input type="image" id="chkGar" src="img/uncheck.png" onclick="check(Gar)"></div>
+            <div class="fishicon" id="Arapaima"><input type="image" id="Arapaima image" onclick="ShowFish(Arapaima)"><input type="image" id="chkArapaima" src="img/uncheck.png" onclick="check(Arapaima)"></div>
+            <div class="fishicon" id="Saddled Bichir"><input type="image" id="Saddled Bichir image" onclick="ShowFish(SaddledB)"><input type="image" id="chkSaddled Bichir" src="img/uncheck.png" onclick="check(SaddledB)"></div>
+            <div class="fishicon" id="Sturgeon"><input type="image" id="Sturgeon image" onclick="ShowFish(Sturgeon)"><input type="image" id="chkSturgeon" src="img/uncheck.png" onclick="check(Sturgeon)"></div>
+            <div class="fishicon" id="Sea Butterfly"><input type="image" id="Sea Butterfly image" onclick="ShowFish(SeaButterfly)"><input type="image" id="chkSea Butterfly" src="img/uncheck.png" onclick="check(SeaButterfly)"></div>
+            <div class="fishicon" id="Sea Horse"><input type="image" id="Sea Horse image" onclick="ShowFish(SeaHorse)"><input type="image" id="chkSea Horse" src="img/uncheck.png" onclick="check(SeaHorse)"></div>
+            <div class="fishicon" id="Clown Fish"><input type="image" id="Clown Fish image" onclick="ShowFish(ClownFish)"><input type="image" id="chkClown Fish" src="img/uncheck.png" onclick="check(ClownFish)"></div>
+            <div class="fishicon" id="Surgeonfish"><input type="image" id="Surgeonfish image" onclick="ShowFish(Surgeonfish)"><input type="image" id="chkSurgeonfish" src="img/uncheck.png" onclick="check(Surgeonfish)"></div>
+            <div class="fishicon" id="Butterfly Fish"><input type="image" id="Butterfly Fish image" onclick="ShowFish(ButterflyFish)"><input type="image" id="chkButterfly Fish" src="img/uncheck.png" onclick="check(ButterflyFish)"></div>
+            <div class="fishicon" id="Napoleonfish"><input type="image" id="Napoleonfish image" onclick="ShowFish(Napoleonfish)"><input type="image" id="chkNapoleonfish" src="img/uncheck.png" onclick="check(Napoleonfish)"></div>
+            <div class="fishicon" id="Zebra Turkeyfish"><input type="image" id="Zebra Turkeyfish image" onclick="ShowFish(ZebraTurkey)"><input type="image" id="chkZebra Turkeyfish" src="img/uncheck.png" onclick="check(ZebraTurkey)"></div>
+            <div class="fishicon" id="Blowfish"><input type="image" id="Blowfish image" onclick="ShowFish(Blowfish)"><input type="image" id="chkBlowfish" src="img/uncheck.png" onclick="check(Blowfish)"></div>
+            <div class="fishicon" id="Puffer Fish"><input type="image" id="Puffer Fish image" onclick="ShowFish(PufferFish)"><input type="image" id="chkPuffer Fish" src="img/uncheck.png" onclick="check(PufferFish)"></div>
+            <div class="fishicon" id="Anchovy"><input type="image" id="Anchovy image" onclick="ShowFish(Anchovy)"><input type="image" id="chkAnchovy" src="img/uncheck.png" onclick="check(Anchovy)"></div>
+            <div class="fishicon" id="Horse Mackerel"><input type="image" id="Horse Mackerel image" onclick="ShowFish(HorseMack)"><input type="image" id="chkHorse Mackerel" src="img/uncheck.png" onclick="check(HorseMack)"></div>
+            <div class="fishicon" id="Barred Knifejaw"><input type="image" id="Barred Knifejaw image" onclick="ShowFish(BarredKnife)"><input type="image" id="chkBarred Knifejaw" src="img/uncheck.png" onclick="check(BarredKnife)"></div>
+            <div class="fishicon" id="Sea Bass"><input type="image" id="Sea Bass image" onclick="ShowFish(SeaBass)"><input type="image" id="chkSea Bass" src="img/uncheck.png" onclick="check(SeaBass)"></div>
+            <div class="fishicon" id="Red Snapper"><input type="image" id="Red Snapper image" onclick="ShowFish(RedSnap)"><input type="image" id="chkRed Snapper" src="img/uncheck.png" onclick="check(RedSnap)"></div>
+            <div class="fishicon" id="Dab"><input type="image" id="Dab image" onclick="ShowFish(Dab)"><input type="image" id="chkDab" src="img/uncheck.png" onclick="check(Dab)"></div>
+            <div class="fishicon" id="Olive Flounder"><input type="image" id="Olive Flounder image" onclick="ShowFish(OliveFlounder)"><input type="image" id="chkOlive Flounder" src="img/uncheck.png" onclick="check(OliveFlounder)"></div>
+            <div class="fishicon" id="Squid"><input type="image" id="Squid image" onclick="ShowFish(Squid)"><input type="image" id="chkSquid" src="img/check.png" onclick="check(Squid)"></div>
+            <div class="fishicon" id="Moray Eel"><input type="image" id="Moray Eel image" onclick="ShowFish(MorayEel)"><input type="image" id="chkMoray Eel" src="img/uncheck.png" onclick="check(MorayEel)"></div>
+            <div class="fishicon" id="Ribbon Eel"><input type="image" id="Ribbon Eel image" onclick="ShowFish(RibbonEel)"><input type="image" id="chkRibbon Eel" src="img/uncheck.png" onclick="check(RibbonEel)"></div>
+            <div class="fishicon" id="Tuna"><input type="image" id="Tuna image" onclick="ShowFish(Tuna)"><input type="image" id="chkTuna" src="img/uncheck.png" onclick="check(Tuna)"></div>
+            <div class="fishicon" id="Blue Marlin"><input type="image" id="Blue Marlin image" onclick="ShowFish(BlueMarlin)"><input type="image" id="chkBlue Marlin" src="img/uncheck.png" onclick="check(BlueMarlin)"></div>
+            <div class="fishicon" id="Giant Trevally"><input type="image" id="Giant Trevally image" onclick="ShowFish(GiantTrevally)"><input type="image" id="chkGiant Trevally" src="img/uncheck.png" onclick="check(GiantTrevally)"></div>
+            <div class="fishicon" id="Mahi-Mahi"><input type="image" id="Mahi-Mahi image" onclick="ShowFish(Mahi)"><input type="image" id="chkMahi-Mahi" src="img/uncheck.png" onclick="check(Mahi)"></div>
+            <div class="fishicon" id="Ocean Sunfish"><input type="image" id="Ocean Sunfish image" onclick="ShowFish(Sunfish)"><input type="image" id="chkOcean Sunfish" src="img/uncheck.png" onclick="check(Sunfish)"></div>
+            <div class="fishicon" id="Ray"><input type="image" id="Ray image" onclick="ShowFish(Ray)"><input type="image" id="chkRay" src="img/uncheck.png" onclick="check(Ray)"></div>
+            <div class="fishicon" id="Saw Shark"><input type="image" id="Saw Shark image" onclick="ShowFish(SawShark)"><input type="image" id="chkSaw Shark" src="img/uncheck.png" onclick="check(SawShark)"></div>
+            <div class="fishicon" id="Hammerhead Shark"><input type="image" id="Hammerhead Shark image" onclick="ShowFish(HammerShark)"><input type="image" id="chkHammerhead Shark" src="img/uncheck.png" onclick="check(HammerShark)"></div>
+            <div class="fishicon" id="Great White Shark"><input type="image" id="Great White Shark image" onclick="ShowFish(GWhiteShark)"><input type="image" id="chkGreat White Shark" src="img/uncheck.png" onclick="check(GWhiteShark)"></div>
+            <div class="fishicon" id="Whale Shark"><input type="image" id="Whale Shark image" onclick="ShowFish(WhaleShark)"><input type="image" id="chkWhale Shark" src="img/uncheck.png" onclick="check(WhaleShark)"></div>
+            <div class="fishicon" id="Suckerfish"><input type="image" id="Suckerfish image" onclick="ShowFish(Suckerfish)"><input type="image" id="chkSuckerfish" src="img/uncheck.png" onclick="check(Suckerfish)"></div>
+            <div class="fishicon" id="Football Fish"><input type="image" id="Football Fish image" onclick="ShowFish(FootballFish)"><input type="image" id="chkFootball Fish" src="img/uncheck.png" onclick="check(FootballFish)"></div>
+            <div class="fishicon" id="Oarfish"><input type="image" id="Oarfish image" onclick="ShowFish(Oarfish)"><input type="image" id="chkOarfish" src="img/uncheck.png" onclick="check(Oarfish)"></div>
+            <div class="fishicon" id="Barreleye"><input type="image" id="Barreleye image" onclick="ShowFish(Barreleye)"><input type="image" id="chkBarreleye" src="img/uncheck.png" onclick="check(Barreleye)"></div>
+            <div class="fishicon" id="Coelacanth"><input type="image" id="Coelacanth image" onclick="ShowFish(Coelacanth)"><input type="image" id="chkCoelacanth" src="img/uncheck.png" onclick="check(Coelacanth)"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="infobox">
+            <div class="picture"><image id="Info-Image"></image></div>
+            <div class="Info-Name"><h1 id="Info-Name"></h1></div>
+            <div class="Info-locshad" id="Info-locshad"><image id="shadow"></image></div>
+            <div class="Blathers"><image id="blathers"><div class="dyk" id="DYK"></div></image></div>
+            <div class="Description"><p id="desc"></p></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            ShowAvail();
+        </script>
+
+    </body>
+</HTML>
