@@ -95,7 +95,16 @@ var fishList = [
     Ray, SawShark, HammerShark, GWhiteShark, WhaleShark, Suckerfish, FootballFish, Oarfish, Barreleye, Coelacanth
 ];
 
+function createlocalcache()
+{
+    if(localStorage.getItem("Bitterlingchk") == null)
+    {
+        fishList.forEach(function(fish){
+            localStorage.setItem(fish.name + "chk", fish.chk);
+        }) 
+    }
 
+}
 
 
 function ShowAvail()
