@@ -256,9 +256,7 @@ function CheckAvail(item)
                 }
             }
         }
-    }
-    }
-    
+    }  
     var fishimage = "img/fish/" + item.name + ".png";
     document.getElementById(item.name + " image").src = fishimage;
     document.getElementById(item.name + " image").height = 96;
