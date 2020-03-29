@@ -269,17 +269,35 @@ function CheckAvail(item)
     }  
     var fishimage = "img/fish/" + item.name + ".png";
     document.getElementById(item.name + " image").src = fishimage;
-    document.getElementById(item.name + " image").height = 96;
-    document.getElementById(item.name + " image").width = 96;
+
+    if(screen.width < 800 || window.innerWidth < 800)
+    {
+        document.getElementById(item.name + " image").height = 48;
+        document.getElementById(item.name + " image").width = 48;
+    }
+    else
+    {
+        document.getElementById(item.name + " image").height = 96;
+        document.getElementById(item.name + " image").width = 96;
+    }
     item.chk = localStorage.getItem(item.name + "chk");
     if(item.chk == 0)
     {
         document.getElementById("chk" + item.name).src = "img/uncheck.png";
+        if(screen.width < 800 || window.innerWidth < 800)
+        {
+        document.getElementById("chk" + item.name).height = 16;
+        document.getElementById("chk" + item.name).width = 16;
+        }
     }
     else
     {
         document.getElementById("chk" + item.name).src = "img/check.png";
-
+        if(screen.width < 800 || window.innerWidth < 800)
+        {
+        document.getElementById("chk" + item.name).height = 16;
+        document.getElementById("chk" + item.name).width = 16;
+        }
     }
 }
 
@@ -368,9 +386,13 @@ function ShowFish(fish)
     var shadows = ["X-small", "Small", "Medium", "Large", "X-large", "XX-Large", "Fin", "Thin"]
 
     document.getElementById("Info-locshad").innerText = "Location: " + fish.loc + "\nValue: " + fish.bells + " bells";
+    if(screen.width < 800 || window.innerWidth < 800)
+    {}
+    else{
     document.getElementById("shadowimg").src = "img/shadows/Shadow" + fish.size + ".png";
     document.getElementById("shadowimg").height = 64;
     document.getElementById("shadowimg").width = 64;
+    }
     if(fish.smonth2 == null)
         {document.getElementById("Info-Shadow").innerText = "Shadow: " + shadows[fish.size] + "\nAvailable: " + timespan}
     else
@@ -388,11 +410,21 @@ function check(fish)
     {
         fish.chk = 0;
         document.getElementById("chk" + fish.name).src = "img/uncheck.png";
+        if(screen.width < 800 || window.innerWidth < 800)
+        {
+        document.getElementById("chk" + fish.name).height = 16;
+        document.getElementById("chk" + fish.name).width = 16;
+        }
     }
     else
     {
         fish.chk = 1;
         document.getElementById("chk" + fish.name).src = "img/check.png";
+        if(screen.width < 800 || window.innerWidth < 800)
+        {
+        document.getElementById("chk" + fish.name).height = 16;
+        document.getElementById("chk" + fish.name).width = 16;
+        }
     }
     localStorage.setItem(fish.name + "chk", fish.chk);
 }
