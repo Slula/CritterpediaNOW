@@ -100,8 +100,15 @@
 .Info-Name {
     grid-column:2/5;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: .6em;
 }
-
+@media screen and (min-width: 800px) {
+    .Info-Name {
+        grid-column:2/5;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size:1em;
+    }
+}
 .Info-locshad{
     grid-row:2;
     grid-column:2/5;
