@@ -286,8 +286,8 @@ function CheckAvail(item)
         document.getElementById("chk" + item.name).src = "img/uncheck.png";
         if(screen.width < 800 || window.innerWidth < 800)
         {
-        document.getElementById("chk" + item.name).height = 16;
-        document.getElementById("chk" + item.name).width = 16;
+        document.getElementById("chk" + item.name).height =24;
+        document.getElementById("chk" + item.name).width = 24;
         }
     }
     else
@@ -295,8 +295,8 @@ function CheckAvail(item)
         document.getElementById("chk" + item.name).src = "img/check.png";
         if(screen.width < 800 || window.innerWidth < 800)
         {
-        document.getElementById("chk" + item.name).height = 16;
-        document.getElementById("chk" + item.name).width = 16;
+        document.getElementById("chk" + item.name).height = 24;
+        document.getElementById("chk" + item.name).width = 24;
         }
     }
 }
@@ -412,8 +412,8 @@ function check(fish)
         document.getElementById("chk" + fish.name).src = "img/uncheck.png";
         if(screen.width < 800 || window.innerWidth < 800)
         {
-        document.getElementById("chk" + fish.name).height = 16;
-        document.getElementById("chk" + fish.name).width = 16;
+        document.getElementById("chk" + fish.name).height = 24;
+        document.getElementById("chk" + fish.name).width = 24;
         }
     }
     else
@@ -422,8 +422,8 @@ function check(fish)
         document.getElementById("chk" + fish.name).src = "img/check.png";
         if(screen.width < 800 || window.innerWidth < 800)
         {
-        document.getElementById("chk" + fish.name).height = 16;
-        document.getElementById("chk" + fish.name).width = 16;
+        document.getElementById("chk" + fish.name).height = 24;
+        document.getElementById("chk" + fish.name).width = 24;
         }
     }
     localStorage.setItem(fish.name + "chk", fish.chk);
