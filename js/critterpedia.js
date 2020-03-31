@@ -114,7 +114,7 @@ var BrownCicada = {no:25, name:"Brown Cicada", smonth:7, emonth:8, stime:8, etim
 var RobustCicada = {no:26, name:"Robust Cicada", smonth:7, emonth:8, stime:8, etime:17, loc:"Tree Trunks", bells:300, desc:"Fittingly enough, the robust cicada can issue a robust, loud chirp...and it does so quite often. I've heard this beastie's impertinent cry so often that I've grown rather good at imitating it. Listen! Chiiirp! CHIIIRP! CHIIir...", chk:0};
 var GiantCicada = {no:27, name:"Giant Cicada", smonth:7, emonth:8, stime:8, etime:17, loc:"Tree Trunks", bells:500, desc:"As the name might indicate, giant cicadas are one of the largest species of cicada in the world. They used to live mostly in warmer western Japan, but they've now also moved to urban eastern Japan. Though they're now common in these areas, they aren't well known in other parts of the world.", chk:0};
 var WalkerCicada = {no:28, name:"Walker Cicada", smonth:8, emonth:9, stime:8, etime:17, loc:"Tree Trunks", bells:400, desc:"Apparently, walker cicadas cry out in an attempt to obscure the calls of other, similar cicadas. I should think that to the average fellow, it just sounds like the cicadas are merely singing together. In any case, I don't suggest looking for them. Their voices may fascinate, but their faces nauseate!", chk:0};
-var EveningCicada = {no:29, name:"Evening Cicada", smonth:7, emonth:8, stime:4, etime:8, stime2:16, etime:19, loc:"Tree Trunks", bells:550, desc:"Evening cicadas got their name from their tendency to start crying once it starts getting dark out. Interestingly enough, these creatures apparently will also cry on an overcast day if it gets dark enough. Don't be fooled by their lovely voices, however. They are quite disgusting to gaze upon...", chk:0};
+var EveningCicada = {no:29, name:"Evening Cicada", smonth:7, emonth:8, stime:4, etime:8, stime2:16, etime2:19, loc:"Tree Trunks", bells:550, desc:"Evening cicadas got their name from their tendency to start crying once it starts getting dark out. Interestingly enough, these creatures apparently will also cry on an overcast day if it gets dark enough. Don't be fooled by their lovely voices, however. They are quite disgusting to gaze upon...", chk:0};
 var CicadaShell = {no:30, name:"Cicada Shell", smonth:7, emonth:8, stime:0, etime:23, loc:"Tree Trunks", bells:100, desc:"Cicada larvae emerge from the ground in the evening and molt on trees, leaving behind empty shells. It's possible to find out the species of cicadas just be looking at these shells. Collecting the shells will tell you how many and what kind of cicadas inhabit a certain area.", chk:0};
 var RedDragonfly = {no:31, name:"Red Dragonfly", smonth:9, emonth:10, stime:8, etime:19, loc:"Flying", bells:180, desc:"Since red dragonflies can't regulate their body temperatures, they only come out in the fall. They actually perish when the heat climbs over 86 degrees Fahrenheit. No summer fun for them, wot?", chk:0};
 var DarnerDragonfly = {no:32, name:"Darner Dragonfly", smonth:4, emonth:10, stime:8, etime:17, loc:"Flying", bells:230, desc:"At first glance, the darner dragonfly, like all dragonflies, appears to be quite a sleek bug, wot? But in its larval stage, this bug is a beastly little carnivore... I suppose if one were being eaten, one wouldn't care if whoever was doing the devouring looked sleek...", chk:0};
@@ -574,7 +574,7 @@ function Show(critter)
     {}
     else
     {
-        if(critter.stime > 12)
+        if(critter.stime2 > 12)
         {
             seriess2 = "PM";
             stime0 = critter.stime2 - 12;
@@ -584,7 +584,7 @@ function Show(critter)
             seriess2 = "AM";
             stime0 = critter.stime2;
         }
-        if(critter.etime > 12)
+        if(critter.etime2 > 12)
         {
             seriese2 = "PM";
             etime0 = critter.etime2 - 12;
