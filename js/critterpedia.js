@@ -538,7 +538,65 @@ function Show(critter)
     var start = months[critter.smonth - 1];
     var end = months[critter.emonth - 1];
     var timespan = start + "-" + end;
-    console.log(critter.smonth2);
+    var stime1;
+    var stime0;
+    var etime1;
+    var etime0;
+    var seriess;
+    var seriess2;
+    var seriese;
+    var seriese2;
+    if(critter.stime > 12)
+    {
+        seriess = "PM";
+        stime1 = critter.stime - 12;
+    }
+    else
+    {
+        seriess = "AM";
+        if(critter.stime == 0)
+            stime1 = 12;
+        else
+            stime1 = critter.stime;
+    }
+    if(critter.etime > 12)
+    {
+        seriese = "PM";
+        etime1 = critter.etime - 12;
+    }
+    else
+    {
+        seriese = "AM";
+        etime1 = critter.etime;
+    }
+    var timeavail = stime1 + seriess + "-" + etime1 + seriese;
+    if(critter.stime2 == null)
+    {}
+    else
+    {
+        if(critter.stime > 12)
+        {
+            seriess2 = "PM";
+            stime0 = critter.stime2 - 12;
+        }
+        else
+        {
+            seriess2 = "AM";
+            stime0 = critter.stime2;
+        }
+        if(critter.etime > 12)
+        {
+            seriese2 = "PM";
+            etime0 = critter.etime2 - 12;
+        }
+        else
+        {
+            seriese2 = "AM";
+            etime0 = critter.etime2;
+        }
+        var timeavail = stime1 + seriess + "-" + etime1 + seriese + ", " + stime0 + seriess2 + "-" + etime0 + seriese2;
+    }
+
     if(critter.smonth2 == null)
     {}
     else
@@ -563,16 +621,16 @@ function Show(critter)
     if(list == "fish")
     {
         if(critter.smonth2 == null)
-            {document.getElementById("Info-Shadow").innerText = "Shadow: " + shadows[critter.size] + "\nAvailable: " + timespan;}
+            {document.getElementById("Info-Shadow").innerText = "Shadow: " + shadows[critter.size] + "\nAvailable: " + timespan + "\n" + timeavail;}
         else
-            {document.getElementById("Info-Shadow").innerText = "Shadow: " + shadows[critter.size] + "\nAvailable: " + timespan + ", " + timespan2;}
+            {document.getElementById("Info-Shadow").innerText = "Shadow: " + shadows[critter.size] + "\nAvailable: " + timespan + ", " + timespan2 + "\n" + timeavail;}
     }
     else
     {
         if(critter.smonth2 == null)
-            document.getElementById("Info-Shadow").innerText = "Available: " + timespan;
+            document.getElementById("Info-Shadow").innerText = "Available: " + timespan + "\n" + timeavail;
         else
-            document.getElementById("Info-Shadow").innerText = "Available: " + timespan + ", " + timespan2;
+            document.getElementById("Info-Shadow").innerText = "Available: " + timespan + ", " + timespan2 + "\n" + timeavail;
     }
 
     document.getElementById("desc").innerText = critter.desc;
