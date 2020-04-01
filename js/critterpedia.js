@@ -169,8 +169,8 @@ var Scorpion = {no:79, name:"Scorpion", smonth:5, emonth:10, stime:19, etime:4, 
 
 var fishList = [
     Bitterling, PaleChub, CrucianCarp, Dace, Carp, Koi, Goldfish, PopEyedGoldfish, RanchuGoldfish, Killifish, 
-    Crawfish, SnapTurt, SoftTurt, Tadpole, Frog, FreshGoby, Loach, Catfish, GiantSnake, Bluegill,
-    YellowPerch, BlackBass,Tilapia,Pike,PondSmelt, Sweetfish,CherrySalmon,Char, GoldenTrout, Stringfish,
+    Crawfish, SoftTurt, SnapTurt, Tadpole, Frog, FreshGoby, Loach, Catfish, GiantSnake, Bluegill,
+    YellowPerch, BlackBass,Tilapia,Pike,PondSmelt, Sweetfish, CherrySalmon,Char, GoldenTrout, Stringfish,
     Salmon, KingSalmon, MittenCrab, Guppy, NibbleFish, Angelfish, Betta, NeonTetra, Rainbowfish, Piranha,
     Arowana, Dorado, Gar, Arapaima, SaddledB, Sturgeon, SeaButterfly, SeaHorse, ClownFish, Surgeonfish,
     ButterflyFish, Napoleonfish, ZebraTurkey, Blowfish, PufferFish, Anchovy, HorseMack, BarredKnife, SeaBass, RedSnap,
@@ -537,6 +537,10 @@ function Show(critter)
 
     var start = months[critter.smonth - 1];
     var end = months[critter.emonth - 1];
+    if(end == undefined)
+    {
+        end = "December";
+    }
     var timespan = start + "-" + end;
     var stime1;
     var stime0;
