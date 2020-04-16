@@ -1,7 +1,7 @@
 var today = new Date();
 var month = today.getMonth()+1;
 var time = today.getHours();
-var northern = true;
+var northern = false;
 var list = "bug";
 
 var Bitterling = {no:0, name:'Bitterling', smonth:11, emonth:3, stime:0, etime:23, loc:"River", size:0, bells:900, desc:"Bitterlings hide their eggs inside large bivalves-like clams-where the young can stay safe until grown. The bitterling isn't being sneaky. No, their young help keep the bivalve healthy by eating invading parasites! It's a wonderful bit of evolutionary deal making, don't you think? Each one keeping the other safe... Though eating parasites does not sound like a happy childhood... Is that why the fish is so bitter?", chk:0};
@@ -16,7 +16,7 @@ var RanchuGoldfish = {no:8, name:"Ranchu Goldfish", smonth:1, emonth:12, stime:9
 var Killifish = {no:9, name:"Killifish", smonth:4, emonth:8, stime:0, etime:23, loc:"Pond", size:0, bells:300, desc:"Killifish are small, travel in schools, and are known for having eyes higher up on their faces than others. They swim in shallow areas in rivers and mostly eat bugs that float on the surface of the water. This is why they have mouths as high up their faces as their eyes, making them effective hunters. Being the same temperature as the water they inhabit, getting grabbed by warm hands can shock them.", chk:0};
 var Crawfish = {no:10, name: "Crawfish", smonth:4, emonth:9, stime:0, etime:23, loc:"Pond", size:1, bells:200, desc:"These shrimp relatives are usually found in ponds and rivers, typically making them easy to catch. The reason for this strange habitat is that crawfish are plentiful and will eat just about anything. Eating plant material makes their bodies red, but only eating fish and meat will turn their bodies blue. A red color indicates they are eating a healthy and balanced diet, so red is the ideal for the species.", chk:0};
 var SoftTurt = {no:11, name:"Soft-Shelled Turtle", smonth:8, emonth:9, stime:16, etime:9, loc:"River", size:3, bells:3750, desc:"The soft-shelled turtle is not one to shy away from biting when provoked. In addition to its powerful bite, this little critter has the ability to breathe both above and below water! It has an unusually long neck which it uses for both breathing and biting. Come to think of it, how did you manage to avoid being bitten? Well, it's a fearsome critter, but just look at that face! Rather silly, wot?", chk:0};
-var SnapTurt = {no:12, name:"Snapping Turtle", smonth:4, emonth:10, stime:9, etime:16, loc:"River", size:4, bells:5000, desc:"The snapping turtle is a large turtle known for it's crocodile-like body and long claws. No, wait-- it is better known for it's ferocious bite, which it can deliver with shocking speed for a turtle. NO, WAIT-- it is BEST known for that time one chased me across a parking lot and I had to climb on top of a car.", chk:0};
+var SnapTurt = {no:12, name:"Snapping Turtle", smonth:4, emonth:10, stime:21, etime:4, loc:"River", size:4, bells:5000, desc:"The snapping turtle is a large turtle known for it's crocodile-like body and long claws. No, wait-- it is better known for it's ferocious bite, which it can deliver with shocking speed for a turtle. NO, WAIT-- it is BEST known for that time one chased me across a parking lot and I had to climb on top of a car.", chk:0};
 var Tadpole = {no:13, name:"Tadpole", smonth:3, emonth:7, stime:0, etime:23, loc:"Pond", size:0, bells:100, desc:"Undoubtedly you know that tadpoles eventually turn into frogs. I must say, I find them impossibly adorable with their squiggly little tails. But even cuter... when they sprout legs! Why, we can witness accelerated evolution in these squirmy little ones. Hoo, it makes me so emotional!", chk:0};
 var Frog = {no:14, name:"Frog", smonth:5, emonth:8, stime:0, etime:23, loc: "Pond", size:1, bells:120, desc:"These former tadpoles prefer to live near ponds and other damp and swampy places. They dwell on land, so they have lungs and skin as opposed to a set of gills. They like to stick close to water because they require a nice, moist lifestyle. Frogs are moist because they emit a liquid to protect their skin from dryness. If too much moisture evaporates from their thin skins, they could have trouble breathing. It's better not to handle frogs, as some species are poisonous, even to the touch!", chk:0};
 var FreshGoby = {no:15, name:"Freshwater Goby", smonth:1, emonth:12, stime:16, etime:9, loc:"River", size:1, bells:400, desc:"These short and stocky river-dwelling fish have a lot of slender teeth for tearing apart other fish. Freshwater gobies dig holes under rocks in riverbeds to make nests for eggs, which the males guard. Other fish breeds take advantage of this protective quality and often lay eggs in goby nests.", chk:0};
@@ -37,7 +37,7 @@ var Stringfish = {no:29, name:"Stringfish", smonth:12, emonth:3, stime:16, etime
 var Salmon = {no:30, name:"Salmon", smonth:9, emonth:9, stime:0, etime:23, loc:"River (Mouth)", size:1, bells:700, desc:"Salmon are popular migratory fish that are born in rivers, migrate to oceans, and return in four years. In Japan, flavored salmon eggs are a very popular dish called ikura, but it hasn't caught on in the US. In rare cases, salmon will only stay in the ocean for one or two years before coming back. These fish are known as \"phantom salmon\" since they're so hard to find in the wild. Their characteristic pink color comes from the shrimp and krill they get in their diet. If they ate differently, their flesh would be white. Salmon only spawn at the bottom of the waterfall where the lake meets the ocean.", chk:0};
 var KingSalmon = {no:31, name:"King Salmon", smonth:9, emonth:9, stime:0, etime:23, loc:"River (Mouth)", size:0, bells:1800, desc:"King salmon grow to about twice the size of regular salmon, which really helps them embody the name. This size essentially makes them the actual kings of salmon, though they are also called chinook salmon. In some regions, they return to the river in spring or summer and live there until spawning in the fall. In rare cases, king salmons' meat will be white, but these are not as popular since pink is the standard.", chk:0};
 var MittenCrab = {no:32, name:"Mitten Crab", smonth:9, emonth:11, stime:16, etime:9, loc:"River", size:1, bells:2000, desc:"Officially known as the mitten crab, they also go by the name \"shanghai crab.\" They are commonly used in Chinese dishes, which is how most people become familiar with them. Their breeding habits are the complete opposite of salmon in that they hatch in the ocean first. They then move up rivers when they reach adult size, returning to the ocean in order to spawn.", chk:0};
-var Guppy = {no:33, name:"Guppy", smonth:4, emonth:11, stime:9, etime:16, loc:"River", size:0, bells:1300, desc:"Guppies are tropical fish that are related to killifish and live in warm rivers. They are popular fish that have been bred to have beautiful flowing tail fins. Mother guppies give birth to their babies after the eggs hatch in their bellies. They give birth at a rate that's nearly constant, so their population tends to grow rather quickly.", chk:0};
+var Guppy = {no:33, name:"Guppy", smonth:4, emonth:11, stime:9, etime:16, loc:"River", size:0, bells:1300, desc:"Oh my! Would you look at that! Auch a beautiful, snazzy little fellow that guppy is! The shape and coloration of guppy fins are all unique. Quite eye-catching, I must say. Do you imagine they host contests for \"most snazzy\"? And...do you suppose I might receive an invite?", chk:0};
 var NibbleFish = {no:34, name:"Nibble Fish", smonth:5, emonth:9, stime:9, etime:16, loc:"River", size:1, bells:1500, desc:"The official name given to this warm-water-dwelling species of fish is \"Garra rufa.\" They are omnivorous, as they both eat algae and scrape the skin off other fish. All you'd have to do to feed them is stick your hand in the tank; they would live off your dead skin. That's why they're called nibble fish. They exfoliate but don't have any teeth, so it doesn't hurt at all!", chk:0};
 var Angelfish = {no:35, name:"Angelfish", smonth:5, emonth:10, stime:16, etime:9, loc:"River", size:1, bells:3000, desc:"These tropical fish move very gracefully because of long fins on their backs and underbellies. Males and females are almost impossible to tell apart, making identification tricky. They lay eggs among water plants. Both genders look after the babies while they cling to weeds. The young look like any other fish, but they gain their angelfish looks once they leave the weeds.", chk:0};
 var Betta = {no:36, name:"Betta", smonth:5, emonth:10, stime:9, etime:16, loc:"River", size:1, bells:2500, desc:"i dont know what blathers says about the betta...", chk:0};
@@ -129,7 +129,7 @@ var Stinkbug = {no:40, name:"Stinkbug", smonth:3, emonth:11, stime:0, etime:23, 
 var ManFacedStinkBug = {no:41, name:"Man-Faced Stink Bug", smonth:3, emonth:11, stime:19, etime:8, loc:"Flowers", bells:1000, desc:"Never mind this stink bug's smell. What you have here is a bug...with a FACE...on its BACK!! Wot-wot! Simply put, the man-faced stink bug has markings on its shell that resemble a human face. Once you notice this face, you cannot UN-notice it. Indeed, this face might haunt you forever. At least the face will distract you from the stink.", chk:0};
 var Ladybug = {no:42, name:"Ladybug", smonth:3, emonth:6, smonth2:10, emonth2:10, stime:8, etime:17, loc:"Flowers", bells:200, desc:"Ladybugs are one insect I thought might appeal to me. Then I made the grievous error of tosisterlyng one. This vile fluid appeared from someplace and.. Oh, it was everywhere! Blech! Utterly appalling!", chk:0};
 var TigerBeetle = {no:43, name:"Tiger Beetle", smonth:2, emonth:11, stime:0, etime:23, loc:"Ground", bells:1500, desc:"The tiger beetle is extremely fleet of foot, though it runs in a rather peculiar way. That is, it sprints, then stops, then sprints again...using these speedy maneuvers to run down its prey. You see, the tiger beetle―like a real tiger―is a powerful predator. The mere thought of it giving chase gives me the willies. Tigers are terrifying at any size.", chk:0};
-var JewelBeetle = {no:44, name:"Jewel Beetle", smonth:4, emonth:8, stime:0, etime:23, loc:"Tree Trunks", bells:2400, desc:"The Japanese name for the jewel beetle inspired their word for iridescence. Makes sense, I suppose... Since the beetles keep their color after death, it's said their bodies were worn as jewelry long ago. Do you suppose they left the legs and antennae on the bodies when they wore them? ...Blech.", chk:0};
+var JewelBeetle = {no:44, name:"Jewel Beetle", smonth:4, emonth:8, stime:0, etime:23, loc:"Tree Stumps", bells:2400, desc:"The Japanese name for the jewel beetle inspired their word for iridescence. Makes sense, I suppose... Since the beetles keep their color after death, it's said their bodies were worn as jewelry long ago. Do you suppose they left the legs and antennae on the bodies when they wore them? ...Blech.", chk:0};
 var ViolinBeetle = {no:45, name:"Violin Beetle", smooth:5, emonth:6, smonth2:9, emonth2:11, stime:0, etime:23, loc:"Tree Stumps", bells:450, desc:"I've heard this bug got its name because its body resembles a violin... I'm not so sure though. All slick and black and shiny... If you were to ask me, it looks rather more like an awful locust...", chk:0};
 var CitrusLongHornedBeetle = {no:46, name:"Citrus Long-Horned Beetle", smonth:1, emonth:12, stime:0, etime:23, loc:"Tree Stumps", bells:350, desc:"The citrus long-horned beetle is a putrid pest and a grave threat to trees. Hoo! It's true! Adults possess powerful jaws and use them to chomp through hardwood and plant fibers with ease. The little larvae are no better, boring bullet-like holes into innocent trees with gusto—citrus trees especially. Voracious and vile, indeed! ", chk:0};
 var RosaliaBatesiBeetle = {no:47, name:"Rosalia Batesi Beetle", smonth:5, emonth:9, stime:0, etime:23, loc:"Tree Stumps", bells:3000, desc:"Insert Blathers Quote", chk:0};
@@ -203,6 +203,12 @@ function createlocalcache()
             localStorage.setItem(bug.name + "chk", bug.chk);
         }) 
     }
+    if(localStorage.getItem("list") == null)
+    {
+        localStorage.setItem("northern", true);
+        localStorage.setItem("list", list);
+    }
+
 }
 
 
@@ -412,6 +418,7 @@ function SwapCritter()
         critterswap.src = "img/bug.png";
         ShowAvail();
     }
+    localStorage.setItem("list", list);
 }
 function SwapHemi()
 {
@@ -419,6 +426,7 @@ function SwapHemi()
     if(northern)
     {
         northern = false;
+        localStorage.setItem("northern", false);
         hemi.src = "img/SouthernHemisphere.png";
         fishList.forEach(function(item)
         {
@@ -464,10 +472,12 @@ function SwapHemi()
             {item.emonth2-=12;}
             }
         })
+
     }
     else
     {
         northern = true;
+        localStorage.setItem("northern", true);
         hemi.src = "img/NorthernHemisphere.png";
         fishList.forEach(function(item)
         {
@@ -517,7 +527,9 @@ function SwapHemi()
     hemi.style.width = 100;
     hemi.style.height = 100;
     hemi.style.border = 5;
+
     ShowAvail();
+
 }
 
 function Show(critter)
@@ -677,4 +689,19 @@ function check(critter)
         }
     }
     localStorage.setItem(critter.name + "chk", critter.chk);
+}
+
+function setuppage()
+{
+    northern = localStorage.getItem("northern");
+    var hemi = document.getElementById('hemi');
+    if(!northern)
+        SwapHemi();
+    list = localStorage.getItem("list");
+    var critterswap = document.getElementById('critterswitch');
+    if(list == "fish")
+        critterswap.src = "img/fish.png";
+    else
+        critterswap.src = "img/bug.png";
+
 }
