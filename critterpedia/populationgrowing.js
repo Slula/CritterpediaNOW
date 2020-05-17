@@ -127,18 +127,18 @@ function highlight(item)
 {
     if(item == "leave")
     {
-        document.getElementById('BG').src = "../img/populationgrowing/GCBG" + list + ".png";
+        document.getElementById('BG').src = "img/populationgrowing/GCBG" + list + ".png";
 
     }
     else
     {
-        document.getElementById('BG').src = "../img/populationgrowing/GCBG" + list + item +".png";
+        document.getElementById('BG').src = "img/populationgrowing/GCBG" + list + item +".png";
     }
 }
 function ShowAvail()
 {
     document.body.style.backgroundColor = "#9c93cc";
-    //document.getElementById("border").style.backgroundImage = "url('../img/populationgrowing/GCFishBG.png')";
+    //document.getElementById("border").style.backgroundImage = "url('img/populationgrowing/GCFishBG.png')";
     //document.getElementById("border").style.borderRadius = "50%/25%"
     //document.body.style.backgroundRepeat = "fixed";
     if(list == "fish")
@@ -290,7 +290,7 @@ function CheckAvail(item)
             }
         }
     }  
-    var critterimage = "../img/populationgrowing/" + list + "/" + item.name + ".png";
+    var critterimage = "img/populationgrowing/" + list + "/" + item.name + ".png";
     if(list == "fish")
     []
     document.getElementById(item.no + " image").src = critterimage;
@@ -308,7 +308,7 @@ function CheckAvail(item)
     item.chk = localStorage.getItem(item.name + "chk");
     if(item.chk == 0)
     {
-        document.getElementById("chk" + item.no).src = "../img/uncheck.png";
+        document.getElementById("chk" + item.no).src = "img/uncheck.png";
         if(screen.width < 800 || window.innerWidth < 800)
         {
         document.getElementById("chk" + item.no).height =24;
@@ -318,9 +318,9 @@ function CheckAvail(item)
     else
     {
         if(list == "fish")
-            document.getElementById("chk" + item.no).src = "../img/check.png";
+            document.getElementById("chk" + item.no).src = "img/check.png";
         else
-            document.getElementById("chk" + item.no).src = "../img/checkb.png";
+            document.getElementById("chk" + item.no).src = "img/checkb.png";
         if(screen.width < 800 || window.innerWidth < 800)
         {
         document.getElementById("chk" + item.no).height = 24;
@@ -334,15 +334,15 @@ function SwapCritter(ls)
     if(ls == "bug")
     {
         list = "bug";
-        document.getElementById('title').src = "../img/populationgrowing/BugTitle.png";
-        document.getElementById('BG').src = "../img/populationgrowing/GCBGbug.png";
+        document.getElementById('title').src = "img/populationgrowing/BugTitle.png";
+        document.getElementById('BG').src = "img/populationgrowing/GCBGbug.png";
         ShowAvail();
     }
     else
     {
         list = "fish";
-        document.getElementById('title').src = "../img/populationgrowing/FishTitle.png";
-        document.getElementById('BG').src = "../img/populationgrowing/GCBGfish.png";
+        document.getElementById('title').src = "img/populationgrowing/FishTitle.png";
+        document.getElementById('BG').src = "img/populationgrowing/GCBGfish.png";
         ShowAvail();
     }
     localStorage.setItem("list", list);
@@ -358,7 +358,7 @@ function Show(critter)
     {
         critter = bugList[critter];
     }
-    var fishimage = "../img/populationgrowing/"+ list + "/" + critter.name + ".png";
+    var fishimage = "img/populationgrowing/"+ list + "/" + critter.name + ".png";
     document.getElementById("Info-Image").src = fishimage;
     document.getElementById("Info-Name").innerText = critter.name;
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -442,11 +442,11 @@ function Show(critter)
     document.getElementById("Info-locshad").innerText = "Location: " + critter.loc + "\nValue: " + critter.bells + " bells";
     if(screen.width < 800 || window.innerWidth < 800 || list =="bug")
     {
-        document.getElementById("shadowimg").src = "../img/shadows/NoShadow.png";
+        document.getElementById("shadowimg").src = "img/shadows/NoShadow.png";
     }
     else
     {
-        document.getElementById("shadowimg").src = "../img/shadows/Shadow" + critter.size + ".png";
+        document.getElementById("shadowimg").src = "img/shadows/Shadow" + critter.size + ".png";
         document.getElementById("shadowimg").height = 64;
         document.getElementById("shadowimg").width = 64;
     }
@@ -466,7 +466,7 @@ function Show(critter)
     }
 
     document.getElementById("desc").innerText = critter.desc;
-    document.getElementById("blathers").src = "../img/Blathers.png";
+    document.getElementById("blathers").src = "img/Blathers.png";
     document.getElementById("DYK").innerText = "Did you know?";
 
 }
@@ -484,7 +484,7 @@ function check(critter)
     if(critter.chk == 1)
     {
         critter.chk = 0;
-        document.getElementById("chk" + critter.no).src = "../img/uncheck.png";
+        document.getElementById("chk" + critter.no).src = "img/uncheck.png";
         if(screen.width < 800 || window.innerWidth < 800)
         {
         document.getElementById("chk" + critter.no).height = 24;
@@ -495,9 +495,9 @@ function check(critter)
     {
         critter.chk = 1;
         if(list == "fish")
-            document.getElementById("chk" + critter.no).src = "../img/check.png";
+            document.getElementById("chk" + critter.no).src = "img/check.png";
         else
-        document.getElementById("chk" + critter.no).src = "../img/checkb.png";
+        document.getElementById("chk" + critter.no).src = "img/checkb.png";
         if(screen.width < 800 || window.innerWidth < 800)
         {
         document.getElementById("chk" + critter.no).height = 24;
@@ -509,10 +509,10 @@ function check(critter)
 
 function setuppage()
 {
-    document.getElementById('BG').src = "../img/populationgrowing/GCBGfish.png";
+    document.getElementById('BG').src = "img/populationgrowing/GCBGfish.png";
     document.getElementById('BG').width = 1099;
     document.getElementById('BG').height = 828;
-    document.getElementById('title').src = "../img/populationgrowing/FishTitle.png";
+    document.getElementById('title').src = "img/populationgrowing/FishTitle.png";
     document.getElementById('title').width = 477;
     
 }
