@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'FinkHeavy';
+    src: url('http:/DragonmasterDX.com/fonts/FinkHeavy.woff2') format('woff2'),
+        url('http:/DragonmasterDX.com/fonts/FinkHeavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+html, body {
+    overflow: hidden;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: .1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: ". . ." ". . .";
+    height:100%;
+}
+
+.toptext{
+    display: inline-block;
+    grid-row:1;
+    grid-column:2;
+}
+.container{
+    background-color: white;
+    grid-row:1/4;
+    grid-column:2;
+    height: 100%;
+    text-align: center;
+}
+.body{
+    overflow-y: hidden;
+    max-height: 100%;
+    overflow: hidden;
+}
+.grid{
+    grid-column:2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: ". ." ". ." ". .";
+}
+.grid div{
+    justify-self: center;
+    height: 340px;
+    width: 340px;
+}
+
+.foot{
+    background-color: white;
+    display: inline-block;
+    grid-column: 2;
+    grid-row: 4;
+    bottom: 0;
+    margin:auto;
+}
+.p{
+    font-family: 'FinkHeavy';
+    text-align: center;
+}
