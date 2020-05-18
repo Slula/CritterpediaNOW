@@ -1,7 +1,4 @@
 RewriteEngine on 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [NC,L]
 
 # If there are caps, set HASCAPS to true and skip next rule
 RewriteRule [A-Z] - [E=HASCAPS:TRUE,S=1]
@@ -42,3 +39,7 @@ RewriteRule [A-Z] - [N]
 
 RewriteCond %{ENV:HASCAPS} TRUE
 RewriteRule ^/?(.*) /$1 [R,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
