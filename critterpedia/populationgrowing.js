@@ -305,7 +305,7 @@ function CheckAvail(item)
         document.getElementById(item.no + " image").height = 96;
         document.getElementById(item.no + " image").width = 96;
     }
-    item.chk = localStorage.getItem(item.name + "chk");
+    item.chk = localStorage.getItem("GC" + item.name + "chk");
     if(item.chk == 0)
     {
         document.getElementById("chk" + item.no).src = "img/uncheck.png";
@@ -504,7 +504,7 @@ function check(critter)
         document.getElementById("chk" + critter.no).width = 24;
         }
     }
-    localStorage.setItem(critter.name + "chk", critter.chk);
+    localStorage.setItem("GC" + critter.name + "chk", critter.chk);
 }
 
 function setuppage()
